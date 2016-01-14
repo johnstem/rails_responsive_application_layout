@@ -1,0 +1,35 @@
+%body
+    .container
+      #title-bar-wrapper.hidden-xs.knowgist-light-blue
+        .row
+          .col-xs-12
+            %h1 Non mobile header bar
+
+      #wrapper.knowgist-darker-blue
+        #sidebar-wrapper
+          .sidebar-nav
+            .sidebar-brand
+
+              = "Sidebar Menu"
+
+            .row.visible-xs
+              .col-xs-12
+                = link_to "Mobile only link", "#"
+            .row
+              .col-xs-12
+                = link_to "Link 1", "#"
+            .row
+              .col-xs-12
+                = link_to "Link 2", "#"
+            .row
+              .col-xs-12
+                = link_to "Link 3", "#"
+
+
+        #page-content-container.black-and-white
+          #page-content-wrapper
+
+            #page-content-margins
+              %a#menu-toggle.visible-xs{:href => "#menu-toggle"}
+                %i.fa.fa-bars
+              = yield
